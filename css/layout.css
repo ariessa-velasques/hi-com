@@ -1,0 +1,147 @@
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+.section {
+  padding: var(--space-6) 0;
+}
+
+.section--light {
+  background-color: var(--color-white);
+}
+
+.section--gray {
+  background-color: var(--color-gray-50);
+}
+
+.section--tint {
+  background-color: #eaf1fd;
+}
+
+.section--dark {
+  background-color: var(--color-navy-950);
+  color: var(--color-white);
+}
+
+.section-head {
+  max-width: 640px;
+  margin-bottom: var(--space-4);
+}
+
+.section-head--row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-4);
+  max-width: none;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.4em 0.9em;
+  border-radius: var(--radius-full);
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--color-blue-600);
+  margin-bottom: var(--space-2);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-blue-500);
+}
+
+.section--dark .eyebrow,
+.section--navy-card .eyebrow {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-blue-400);
+}
+
+.section-title {
+  font-size: var(--fs-3xl);
+  color: var(--color-navy-950);
+}
+
+.section--dark .section-title {
+  color: var(--color-white);
+}
+
+.section-title .highlight {
+  color: var(--color-blue-600);
+}
+
+.section--dark .section-title .highlight {
+  color: var(--color-blue-400);
+}
+
+.section-desc {
+  margin-top: var(--space-2);
+  color: var(--color-gray-600);
+  font-size: var(--fs-lg);
+}
+
+.section--dark .section-desc {
+  color: var(--color-text-light);
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.85em 1.6em;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition);
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--color-blue-600);
+  color: var(--color-white);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-blue-500);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-white);
+}
+
+.btn-sm {
+  padding: 0.6em 1.2em;
+  font-size: var(--fs-xs);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
