@@ -92,7 +92,7 @@
         </p>
 
         <div class="form-block">
-          <form id="talentBankForm" novalidate>
+          <form id="talentBankForm" action="../php/send-application.php" method="POST" enctype="multipart/form-data" novalidate>
             <div class="form-group">
               <label for="fullName">Nome completo (obrigatório)</label>
               <input type="text" id="fullName" name="fullName" required>

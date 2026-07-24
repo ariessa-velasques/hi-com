@@ -53,22 +53,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const talentBankForm = document.getElementById("talentBankForm");
-  if (talentBankForm) {
-    const status = document.getElementById("talentBankFormStatus");
-    talentBankForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      if (status) {
-        status.textContent = "Envio ainda não está disponível nesta versão do site. Em breve este formulário será conectado.";
-        status.classList.add("is-visible");
-      }
-    });
-  }
-
   const jobsFilterForm = document.getElementById("jobsFilterForm");
   if (jobsFilterForm) {
     jobsFilterForm.addEventListener("submit", (e) => {
       e.preventDefault();
     });
+  }
+
+  document.querySelectorAll(".job-card__summary").forEach((summary) => {
+    summary.addEventListener("click", () => {
+      const details = document.getElementById(summary.getAttribute("aria-controls"));
+      const isOpen = summary.getAttribute("aria-expanded") === "true";
+      summary.setAttribute("aria-expanded", String(!isOpen));
+      if (details) {
+        details.hidden = isOpen;
+      }
+    });
+  });
+
+  const vagaField = document.getElementById("vaga");
+  if (vagaField) {
+    const params = new URLSearchParams(window.location.search);
+    const vaga = params.get("vaga");
+    const local = params.get("local");
+    if (vaga) {
+      vagaField.value = local ? `${vaga} — ${local}` : vaga;
+    } else {
+      vagaField.value = "Candidatura espontânea";
+    }
   }
 });

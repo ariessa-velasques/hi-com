@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trabalhe Conosco | Hi-Com</title>
-  <meta name="description" content="Confira as vagas abertas na Hi-Com e faça parte do nosso time.">
+  <title>Enviar Currículo | Hi-Com</title>
+  <meta name="description" content="Envie seu currículo para uma vaga específica da Hi-Com.">
 
   <link rel="icon" href="../img/favicon.png" type="image/png">
 
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/page-hero.css">
-  <link rel="stylesheet" href="../css/jobs.css">
+  <link rel="stylesheet" href="../css/form.css">
   <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
@@ -79,98 +79,47 @@
     <section class="page-hero">
       <div class="container">
         <span class="eyebrow">Oportunidades</span>
-        <h1 class="page-hero-title">Trabalhe Conosco</h1>
+        <h1 class="page-hero-title">Enviar Currículo</h1>
       </div>
     </section>
 
     <section class="section section--light">
       <div class="container">
-        <form class="jobs-filters" id="jobsFilterForm">
-          <div class="jobs-filters__row">
-            <input type="text" name="keyword" placeholder="Palavras-chave">
-            <input type="text" name="location" placeholder="Localização">
-          </div>
+        <p class="section-desc" style="max-width: 720px; margin-bottom: var(--space-4);">
+          Preencha seus dados abaixo para se candidatar. Sua candidatura e currículo serão
+          enviados diretamente para o nosso time de recrutamento.
+        </p>
 
-          <label class="jobs-filters__remote">
-            <input type="checkbox" name="remote">
-            Remote positions only
-          </label>
-
-          <button type="submit" class="jobs-filters__submit">Search Jobs</button>
-
-          <div class="jobs-filters__types">
-            <div class="jobs-filters__type-list">
-              <label><input type="checkbox" checked> Freelance</label>
-              <label><input type="checkbox" checked> Full Time</label>
-              <label><input type="checkbox" checked> Internship</label>
-              <label><input type="checkbox" checked> Part Time</label>
-              <label><input type="checkbox" checked> Temporary</label>
+        <div class="form-block">
+          <form id="applicationForm" action="../php/send-application.php" method="POST" enctype="multipart/form-data" novalidate>
+            <div class="form-group">
+              <label for="vaga">Vaga</label>
+              <input type="text" id="vaga" name="vaga" readonly>
             </div>
-            <a href="#" class="jobs-filters__rss">RSS</a>
-          </div>
-        </form>
 
-        <div class="jobs-list">
-          <article class="job-card">
-            <button type="button" class="job-card__summary" aria-expanded="false" aria-controls="job-tecnico-details">
-              <div class="job-card__icon">
-                <svg viewBox="0 0 24 24"><path d="M4 21V8a1 1 0 0 1 1-1h6V3.5a1 1 0 0 1 1-1h0a1 1 0 0 1 1 1V7h6a1 1 0 0 1 1 1v13M4 21h16M9 11h.01M9 15h.01M15 11h.01M15 15h.01"/></svg>
-              </div>
-              <div class="job-card__body">
-                <h2 class="job-card__title">Técnico</h2>
-                <p class="job-card__company">Hi-Com</p>
-                <p class="job-card__desc">
-                  A Hi-Com é uma empresa de tecnologia e comunicação que desenvolve soluções
-                  inovadoras para conectar pessoas e negócios. Nossa equipe é movida por inovação,
-                  colaboração e excelência no atendimento aos nossos clientes.
-                </p>
-              </div>
-              <div class="job-card__meta">
-                <span class="job-card__location">Maranhão/MA</span>
-                <span class="job-card__date">Publicado 6 horas atrás</span>
-                <svg class="job-card__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-              </div>
-            </button>
-
-            <div class="job-card__details" id="job-tecnico-details" hidden>
-              <h3>Responsabilidades</h3>
-              <ul>
-                <li>Instalação, manutenção e configuração de redes, cabeamento estruturado e equipamentos de infraestrutura.</li>
-                <li>Atendimento técnico em campo, seguindo normas de segurança e procedimentos da empresa.</li>
-                <li>Diagnóstico e resolução de problemas técnicos em sistemas de conectividade e segurança eletrônica.</li>
-                <li>Elaboração de relatórios técnicos das atividades realizadas.</li>
-              </ul>
-
-              <h3>Requisitos</h3>
-              <ul>
-                <li>Ensino técnico completo em Eletrotécnica, Telecomunicações, Redes ou área correlata.</li>
-                <li>Experiência prévia com cabeamento estruturado e/ou redes elétricas.</li>
-                <li>Disponibilidade para viagens e atendimento em campo.</li>
-                <li>CNH categoria B (desejável).</li>
-              </ul>
-
-              <h3>Benefícios</h3>
-              <ul>
-                <li>Vale-transporte e vale-alimentação.</li>
-                <li>Plano de saúde e odontológico.</li>
-                <li>Oportunidade de crescimento em uma empresa consolidada há mais de 20 anos no mercado.</li>
-              </ul>
-
-              <a href="candidatura.html?vaga=T%C3%A9cnico&local=Maranh%C3%A3o%2FMA" class="btn btn-primary">
-                Enviar currículo para esta vaga
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </a>
+            <div class="form-group">
+              <label for="fullName">Nome completo (obrigatório)</label>
+              <input type="text" id="fullName" name="fullName" required>
             </div>
-          </article>
-        </div>
 
-        <div class="jobs-cta">
-          <h2>Não encontrou a vaga ideal?</h2>
-          <p>
-            Envie seu currículo mesmo assim! Cadastre-se no nosso
-            <a href="banco-de-talentos.html">Banco de Talentos</a> e entraremos em contato
-            quando surgir uma oportunidade compatível com o seu perfil.
-          </p>
+            <div class="form-group">
+              <label for="email">E-mail (obrigatório)</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Telefone (obrigatório)</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+              <label for="resume">Currículo (PDF ou DOC – máx. 5MB) (obrigatório)</label>
+              <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar candidatura</button>
+            <p class="form-status" id="applicationFormStatus"></p>
+          </form>
         </div>
       </div>
     </section>
@@ -229,7 +178,7 @@
             <li><a href="quem-somos.html">Quem Somos</a></li>
             <li><a href="atas.html">ATAs</a></li>
             <li><a href="https://api.whatsapp.com/send/?phone=5561991869608&text=Ol%C3%A1%2C+vim+pelo+site+da+HiCom&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">Fale Conosco</a></li>
-            <li><a href="trabalhe-conosco.html" aria-current="page">Trabalhe Conosco</a></li>
+            <li><a href="trabalhe-conosco.html">Trabalhe Conosco</a></li>
             <li><a href="banco-de-talentos.html">Banco de Talentos</a></li>
           </ul>
         </div>
