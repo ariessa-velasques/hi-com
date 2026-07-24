@@ -12,8 +12,23 @@
 }
 
 .page-hero .container {
+  position: relative;
+  z-index: 2;
   padding-top: var(--space-4);
   padding-bottom: var(--space-4);
+}
+
+.page-hero--video {
+  background-image: linear-gradient(90deg, rgba(10, 14, 39, 0.85) 30%, rgba(10, 14, 39, 0.55) 100%);
+}
+
+.page-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .page-hero-title {

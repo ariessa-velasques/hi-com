@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: var(--space-3);
-  max-width: 700px;
+  max-width: 1000px;
 }
 
 .ata-card {
@@ -13,7 +13,7 @@
 }
 
 .ata-card__logo {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   min-height: 40px;
@@ -22,6 +22,11 @@
   font-size: var(--fs-lg);
   color: var(--color-gray-600);
   letter-spacing: 0.02em;
+}
+
+.ata-card__logo img {
+  max-height: 40px;
+  width: auto;
 }
 
 .ata-card__title {

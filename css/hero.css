@@ -5,11 +5,30 @@
   align-items: center;
   padding-top: 76px;
   background-color: var(--color-navy-950);
-  background-image: linear-gradient(90deg, rgba(10, 14, 39, 0.92) 20%, rgba(10, 14, 39, 0.55) 65%, rgba(10, 14, 39, 0.3) 100%), url("../img/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
   color: var(--color-white);
   overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(90deg, rgba(10, 14, 39, 0.92) 20%, rgba(10, 14, 39, 0.55) 65%, rgba(10, 14, 39, 0.3) 100%);
+  z-index: 1;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content {
@@ -57,10 +76,18 @@
 
 .clients-track {
   display: flex;
-  align-items: center;
-  gap: var(--space-5);
   overflow: hidden;
   flex: 1;
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+
+.clients-track__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  flex-shrink: 0;
+  padding-right: var(--space-5);
+  animation: clients-scroll 40s linear infinite;
 }
 
 .clients-track img {
@@ -68,6 +95,22 @@
   width: auto;
   opacity: 0.6;
   filter: grayscale(1) brightness(2);
+  flex-shrink: 0;
+}
+
+@keyframes clients-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clients-track__inner {
+    animation: none;
+  }
 }
 
 @media (max-width: 768px) {
