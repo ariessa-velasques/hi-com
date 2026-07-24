@@ -69,12 +69,6 @@
   color: var(--color-gray-600);
 }
 
-.jobs-filters__rss {
-  font-size: var(--fs-sm);
-  color: var(--color-blue-600);
-  text-decoration: underline;
-}
-
 .jobs-list {
   margin-top: var(--space-4);
   display: flex;
