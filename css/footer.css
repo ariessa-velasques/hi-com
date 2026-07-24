@@ -18,6 +18,10 @@
   margin-bottom: var(--space-2);
 }
 
+.footer-brand .logo img {
+  height: 52px;
+}
+
 .footer-social {
   display: flex;
   flex-direction: column;

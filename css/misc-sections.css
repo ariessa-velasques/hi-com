@@ -48,8 +48,18 @@
   color: var(--color-white);
 }
 
+.atas-banner .eyebrow {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-blue-400);
+}
+
 .atas-banner .section-title {
   max-width: 480px;
+  color: var(--color-white);
+}
+
+.atas-banner .section-title .highlight {
+  color: var(--color-blue-400);
 }
 
 .atas-banner .btn {
