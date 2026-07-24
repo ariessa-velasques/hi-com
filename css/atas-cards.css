@@ -1,0 +1,35 @@
+.atas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-3);
+  max-width: 700px;
+}
+
+.ata-card {
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  text-align: center;
+}
+
+.ata-card__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  margin-bottom: var(--space-2);
+  font-weight: 800;
+  font-size: var(--fs-lg);
+  color: var(--color-gray-600);
+  letter-spacing: 0.02em;
+}
+
+.ata-card__title {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-navy-950);
+  margin-bottom: var(--space-2);
+  border-left: 2px solid var(--color-blue-500);
+  padding-left: 0.6em;
+  text-align: left;
+}

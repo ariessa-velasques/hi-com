@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Integridade e Compliance | Hi-Com</title>
-  <meta name="description" content="Conheça as práticas de integridade e compliance da Hi-Com.">
+  <meta name="description" content="Conheça o Programa de Integridade e Compliance da Hi-Com, o Código de Ética e o canal de denúncia.">
 
   <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
 
@@ -16,6 +16,9 @@
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/page-hero.css">
+  <link rel="stylesheet" href="../css/split-section.css">
+  <link rel="stylesheet" href="../css/form.css">
   <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
@@ -74,15 +77,143 @@
   </header>
 
   <main>
-    <section class="section section--light" style="padding-top: calc(76px + var(--space-6));">
+    <!-- Page hero -->
+    <section class="page-hero">
       <div class="container">
-        <span class="eyebrow">Integridade</span>
-        <h1 class="section-title">Integridade e <span class="highlight">Compliance</span></h1>
-        <p class="section-desc">
-          Conteúdo sobre nossas práticas de integridade e compliance será publicado em breve.
-        </p>
+        <span class="eyebrow">Nosso programa</span>
+        <h1 class="page-hero-title">Integridade e Compliance</h1>
       </div>
     </section>
+
+    <section class="section section--light">
+      <div class="container">
+        <div class="split">
+          <div class="split-media">
+            <div class="img-placeholder">Imagem: colaboradores em reunião<br>(aguardando arquivo)</div>
+          </div>
+          <div class="split-text">
+            <span class="eyebrow">Sobre nós</span>
+            <h2 class="section-title">Programa de Integridade e Compliance</h2>
+            <p class="section-desc">
+              O Programa de Integridade e Compliance tem como objetivo assegurar que todas as
+              atividades da empresa sejam conduzidas com ética, transparência e em conformidade
+              com a legislação vigente.
+            </p>
+            <p class="section-desc">
+              A empresa adota práticas voltadas à prevenção, detecção e combate a
+              irregularidades, promovendo um ambiente corporativo íntegro e responsável, tanto
+              internamente quanto nas relações com terceiros.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light">
+      <div class="container">
+        <div class="split">
+          <div class="split-text">
+            <span class="eyebrow">Código de ética</span>
+            <h3 class="section-title" style="font-size: var(--fs-xl);">Código de Ética e Conduta</h3>
+            <p class="section-desc">
+              O Código de Ética e Conduta estabelece os princípios e diretrizes que orientam o
+              comportamento de todos os colaboradores, parceiros e prestadores de serviços.
+            </p>
+            <p class="section-desc">
+              O documento define padrões de integridade, respeito, responsabilidade e
+              transparência, assegurando que as relações da empresa sejam pautadas por conduta
+              ética e profissional.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">
+              Baixar Código de Ética
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+            </a>
+
+            <h3 class="section-title" style="font-size: var(--fs-xl); margin-top: var(--space-4);">Política de Combate à Corrupção</h3>
+            <p class="section-desc">
+              A empresa adota política de tolerância zero em relação a qualquer forma de
+              corrupção, suborno ou prática ilícita.
+            </p>
+            <p class="section-desc">
+              Todas as atividades são conduzidas em conformidade com a legislação aplicável,
+              especialmente a Lei Anticorrupção, reforçando o compromisso com a ética, a
+              integridade e a transparência nas relações institucionais e comerciais.
+            </p>
+
+            <h3 class="section-title" style="font-size: var(--fs-xl); margin-top: var(--space-4);">Canal de Denúncia</h3>
+            <p class="section-desc">
+              A empresa disponibiliza um canal de denúncia para o reporte de condutas que violem
+              princípios éticos, normas internas ou a legislação vigente.
+            </p>
+            <p class="section-desc">
+              As manifestações podem ser realizadas de forma identificada ou anônima, sendo
+              assegurada a confidencialidade das informações e a proteção contra qualquer tipo de
+              retaliação ao denunciante.
+            </p>
+          </div>
+          <div class="split-media">
+            <div class="img-placeholder">Imagem: política de combate à corrupção<br>(aguardando arquivo)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light">
+      <div class="container">
+        <div class="form-block">
+          <form id="complaintForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">Nome (opcional)</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Nome">
+              </div>
+              <div class="form-group">
+                <label for="lastName">&nbsp;</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Sobrenome">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail (opcional)</label>
+              <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+              <label for="type">Tipo de denúncia *</label>
+              <select id="type" name="type" required>
+                <option value="">Selecione</option>
+                <option>Assédio</option>
+                <option>Corrupção</option>
+                <option>Conflito de Interesses</option>
+                <option>Discriminação</option>
+                <option>Fraude</option>
+                <option>Violação de Normas Internas</option>
+                <option>Outro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="description">Descrição da denúncia *</label>
+              <textarea id="description" name="description" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="involved">Envolvidos (opcional)</label>
+              <textarea id="involved" name="involved"></textarea>
+            </div>
+
+            <p class="form-note">
+              As informações enviadas serão tratadas com confidencialidade. É garantida a
+              proteção ao denunciante contra qualquer forma de retaliação.
+            </p>
+
+            <button type="submit" class="btn btn-primary">Enviar denúncia</button>
+            <p class="form-status" id="complaintFormStatus"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->

@@ -40,4 +40,16 @@ document.addEventListener("DOMContentLoaded", () => {
       header.classList.toggle("is-scrolled", window.scrollY > 10);
     });
   }
+
+  const complaintForm = document.getElementById("complaintForm");
+  if (complaintForm) {
+    const status = document.getElementById("complaintFormStatus");
+    complaintForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (status) {
+        status.textContent = "Envio ainda não está disponível nesta versão do site. Em breve este formulário será conectado.";
+        status.classList.add("is-visible");
+      }
+    });
+  }
 });
