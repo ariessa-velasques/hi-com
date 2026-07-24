@@ -53,24 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const jobsFilterForm = document.getElementById("jobsFilterForm");
-  if (jobsFilterForm) {
-    jobsFilterForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-    });
-  }
-
-  document.querySelectorAll(".job-card__summary").forEach((summary) => {
-    summary.addEventListener("click", () => {
-      const details = document.getElementById(summary.getAttribute("aria-controls"));
-      const isOpen = summary.getAttribute("aria-expanded") === "true";
-      summary.setAttribute("aria-expanded", String(!isOpen));
-      if (details) {
-        details.hidden = isOpen;
-      }
-    });
-  });
-
   const vagaField = document.getElementById("vaga");
   if (vagaField) {
     const params = new URLSearchParams(window.location.search);
