@@ -52,4 +52,23 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  const talentBankForm = document.getElementById("talentBankForm");
+  if (talentBankForm) {
+    const status = document.getElementById("talentBankFormStatus");
+    talentBankForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (status) {
+        status.textContent = "Envio ainda não está disponível nesta versão do site. Em breve este formulário será conectado.";
+        status.classList.add("is-visible");
+      }
+    });
+  }
+
+  const jobsFilterForm = document.getElementById("jobsFilterForm");
+  if (jobsFilterForm) {
+    jobsFilterForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+    });
+  }
 });

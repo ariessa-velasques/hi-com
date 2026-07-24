@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ATAs de Registro de Preços | Hi-Com</title>
-  <meta name="description" content="Confira as Atas de Registro de Preços disponíveis para adesão junto à Hi-Com.">
+  <title>Banco de Talentos | Hi-Com</title>
+  <meta name="description" content="Cadastre seu currículo no Banco de Talentos da Hi-Com e seja avisado quando surgir uma vaga compatível com o seu perfil.">
 
   <link rel="icon" href="../img/favicon.png" type="image/png">
 
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/page-hero.css">
-  <link rel="stylesheet" href="../css/atas-cards.css">
+  <link rel="stylesheet" href="../css/form.css">
   <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
@@ -51,7 +51,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="atas.html" class="nav-link" aria-current="page">ATAs</a>
+            <a href="atas.html" class="nav-link">ATAs</a>
           </li>
           <li class="nav-item">
             <a href="integridade-compliance.html" class="nav-link">Integridade e Compliance</a>
@@ -76,47 +76,62 @@
 
   <main>
     <!-- Page hero -->
-    <section class="page-hero page-hero--video">
-      <video class="page-hero-video" autoplay muted loop playsinline>
-        <source src="../img/atas-hero-bg.mp4" type="video/mp4">
-      </video>
+    <section class="page-hero">
       <div class="container">
-        <span class="eyebrow">Transparência</span>
-        <h1 class="page-hero-title">Atas de Registro de Preços</h1>
+        <span class="eyebrow">Oportunidades</span>
+        <h1 class="page-hero-title">Banco de Talentos</h1>
       </div>
     </section>
 
     <section class="section section--light">
       <div class="container">
-        <div class="atas-grid">
-          <div class="ata-card">
-            <div class="ata-card__logo"><img src="../img/atas/ebserh-logo.png" alt="EBSERH"></div>
-            <div class="ata-card__title">Adesão da ATA | HC UFPE EBSERH</div>
-            <a href="../img/atas/ADESAO-DA-ATA-HC-UFPE-EBSERH.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              Visualizar
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3h7v7M21 3l-9 9M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/></svg>
-            </a>
-          </div>
-          <div class="ata-card">
-            <div class="ata-card__logo"><img src="../img/atas/unifap-logo.png" alt="UNIFAP"></div>
-            <div class="ata-card__title">Adesão da ATA | UNIFAP</div>
-            <a href="../img/atas/ADESAO-DA-ATA-UNIFAP.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              Visualizar
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3h7v7M21 3l-9 9M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/></svg>
-            </a>
-          </div>
-          <div class="ata-card">
-            <div class="ata-card__logo">TJAP</div>
-            <div class="ata-card__title">Adesão da ATA | TJAP</div>
-            <a href="../img/atas/ADESAO-DA-ATA-TJAP.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              Visualizar
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3h7v7M21 3l-9 9M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/></svg>
-            </a>
-          </div>
+        <p class="section-desc" style="max-width: 720px; margin-bottom: var(--space-4);">
+          Não encontrou a vaga ideal? Envie seu currículo mesmo assim! Cadastre-se no nosso
+          banco de talentos e entraremos em contato quando surgir uma oportunidade compatível
+          com o seu perfil.
+        </p>
+
+        <div class="form-block">
+          <form id="talentBankForm" novalidate>
+            <div class="form-group">
+              <label for="fullName">Nome completo (obrigatório)</label>
+              <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail (obrigatório)</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Telefone (obrigatório)</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+              <label for="interestArea">Área de interesse em Tecnologia</label>
+              <select id="interestArea" name="interestArea">
+                <option>Desenvolvimento de Software</option>
+                <option>Redes e Infraestrutura</option>
+                <option>Segurança da Informação</option>
+                <option>Suporte Técnico</option>
+                <option>Engenharia Elétrica</option>
+                <option>Gestão de Projetos</option>
+                <option>Outro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="resume">Currículo (PDF ou DOC – máx. 5MB)</label>
+              <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar candidatura</button>
+            <p class="form-status" id="talentBankFormStatus"></p>
+          </form>
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- Footer -->
@@ -126,7 +141,7 @@
         <div class="footer-brand">
           <a href="../index.html" class="logo">
             <img src="../img/logo-white.png" alt="Hi-Com">
-      </a>
+          </a>
         </div>
         <div class="footer-social">
           <span class="footer-social__label">Acompanhe nas Redes Sociais</span>
@@ -173,7 +188,7 @@
             <li><a href="atas.html">ATAs</a></li>
             <li><a href="https://api.whatsapp.com/send/?phone=5561991869608&text=Ol%C3%A1%2C+vim+pelo+site+da+HiCom&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">Fale Conosco</a></li>
             <li><a href="trabalhe-conosco.html">Trabalhe Conosco</a></li>
-            <li><a href="banco-de-talentos.html">Banco de Talentos</a></li>
+            <li><a href="banco-de-talentos.html" aria-current="page">Banco de Talentos</a></li>
           </ul>
         </div>
 
