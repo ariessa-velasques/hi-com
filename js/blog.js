@@ -4,9 +4,9 @@ function blogEscapeHtml(text) {
   return div.innerHTML;
 }
 
-function blogCardHTML(post, imgBasePath) {
+function blogCardHTML(post, imgBasePath, linkBasePath) {
   return `
-    <a class="blog-card" href="blog-post.html?post=${encodeURIComponent(post.id)}">
+    <a class="blog-card" href="${linkBasePath}blog-post.html?post=${encodeURIComponent(post.id)}">
       <div class="blog-card__media">
         <img src="${imgBasePath}${post.imagem}" alt="${blogEscapeHtml(post.titulo)}">
       </div>
@@ -26,13 +26,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const homeList = document.getElementById("blogList");
   if (homeList) {
     const imgBasePath = homeList.dataset.imgBase || "img/";
-    homeList.innerHTML = posts.slice(0, 3).map((p) => blogCardHTML(p, imgBasePath)).join("");
+    const linkBasePath = homeList.dataset.linkBase || "pages/";
+    homeList.innerHTML = posts.slice(0, 3).map((p) => blogCardHTML(p, imgBasePath, linkBasePath)).join("");
   }
 
   const fullList = document.getElementById("blogFullList");
   if (fullList) {
     const imgBasePath = fullList.dataset.imgBase || "../img/";
-    fullList.innerHTML = posts.map((p) => blogCardHTML(p, imgBasePath)).join("");
+    const linkBasePath = fullList.dataset.linkBase || "";
+    fullList.innerHTML = posts.map((p) => blogCardHTML(p, imgBasePath, linkBasePath)).join("");
   }
 
   const postContainer = document.getElementById("blogPost");
