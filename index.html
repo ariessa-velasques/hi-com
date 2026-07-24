@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="css/cards.css">
   <link rel="stylesheet" href="css/portfolio.css">
   <link rel="stylesheet" href="css/misc-sections.css">
+  <link rel="stylesheet" href="css/blog-feed.css">
   <link rel="stylesheet" href="css/footer.css">
 </head>
 
@@ -381,47 +382,20 @@
     <!-- Blog -->
     <section class="section section--light">
       <div class="container">
-        <span class="eyebrow">Nosso blog</span>
-        <h2 class="section-title">
-          Fique por dentro das últimas tendências em <span class="highlight">tecnologia</span>
-        </h2>
-
-        <div class="blog-grid">
-          <article class="blog-card">
-            <div class="blog-card__media">
-              <img src="img/blog/dia-do-trabalhador.jpg" alt="Feliz Dia do Trabalhador - Hi-Com">
-            </div>
-            <div class="blog-card__body">
-              <span class="blog-card__date">1º de maio</span>
-              <h3 class="blog-card__title">Feliz Dia do Trabalhador</h3>
-              <p class="blog-card__excerpt">Obrigado à nossa equipe pelo comprometimento em construir os resultados da
-                Hi-Com todos os dias.</p>
-            </div>
-          </article>
-
-          <article class="blog-card">
-            <div class="blog-card__media">
-              <img src="img/blog/justica-4-0.jpg" alt="Justiça 4.0 lança pesquisa sobre Integridade e Compliance">
-            </div>
-            <div class="blog-card__body">
-              <span class="blog-card__date">24 de julho de 2023</span>
-              <h3 class="blog-card__title">Justiça 4.0 lança pesquisa sobre Integridade e Compliance</h3>
-              <p class="blog-card__excerpt">Iniciativa reforça a importância de práticas éticas e transparentes nas
-                relações institucionais.</p>
-            </div>
-          </article>
-
-          <article class="blog-card">
-            <div class="blog-card__media">
-              <img src="img/blog/seguranca-ti.jpg" alt="Segurança e compliance em TI">
-            </div>
-            <div class="blog-card__body">
-              <span class="blog-card__date">Em breve</span>
-              <h3 class="blog-card__title">Segurança e compliance em TI</h3>
-              <p class="blog-card__excerpt">Conteúdo do blog será publicado em breve.</p>
-            </div>
-          </article>
+        <div class="section-head-row-alt">
+          <div class="section-head-row-alt__title">
+            <span class="eyebrow">Nosso blog</span>
+            <h2 class="section-title">
+              Fique por dentro das últimas tendências em <span class="highlight">tecnologia</span>
+            </h2>
+          </div>
+          <a href="pages/blog.html" class="btn btn-primary" style="flex-shrink:0;">
+            Ver todos os posts
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </div>
+
+        <div class="blog-grid" id="blogList" data-img-base="img/"></div>
       </div>
     </section>
   </main>
@@ -502,6 +476,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="pages/quem-somos.html">Quem Somos</a></li>
             <li><a href="pages/atas.html">ATAs</a></li>
+            <li><a href="pages/blog.html">Blog</a></li>
             <li><a
                 href="https://api.whatsapp.com/send/?phone=5561991869608&text=Ol%C3%A1%2C+vim+pelo+site+da+HiCom&type=phone_number&app_absent=0"
                 target="_blank" rel="noopener noreferrer">Fale Conosco</a></li>
@@ -544,6 +519,8 @@
     </div>
   </footer>
 
+  <script src="js/blog-data.js"></script>
+  <script src="js/blog.js"></script>
   <script src="js/main.js"></script>
 </body>
 
